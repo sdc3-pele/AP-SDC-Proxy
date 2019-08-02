@@ -1,14 +1,17 @@
+require('dotenv').config()
+require('newrelic');
 const express = require('express');
 const app = express();
-const PORT = 3000;
+const PORT = process.env.PORT || 3000;
 const httpProxy = require('http-proxy');
 const proxy = httpProxy.createProxyServer();
 
-const photos = 'http://localhost:3001';
-const itemSummary = 'http://localhost:3002';
-const relatedProducts = 'http://localhost:3003';
-const reviews = 'http://localhost:3004';
+// const photos = 'http://localhost:3001';
+// const itemSummary = 'http://localhost:3002';
+// const relatedProducts = 'http://localhost:3003';
+const reviews = `${process.env.REVIEWS_HOST}:3004`;
 
+app.use('/loaderio-4bdaabb0ac2cb96710d65a728bedc8f2.txt', express.static('./public/loaderio-4bdaabb0ac2cb96710d65a728bedc8f2.txt'));
 
 app.use('/:id', express.static('./public'));
 
