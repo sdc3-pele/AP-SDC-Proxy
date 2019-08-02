@@ -1,5 +1,4 @@
 node_modules
 *.bundle.js
 .env
-newrelic.js
 newrelic_agent.log
