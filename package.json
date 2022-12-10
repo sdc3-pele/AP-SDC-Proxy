@@ -19,7 +19,7 @@
   },
   "homepage": "https://github.com/fec3-galadriel/mike-proxy#readme",
   "dependencies": {
-    "express": "^4.17.1",
+    "express": "^4.17.3",
     "http-proxy": "^1.17.0",
     "react": "^16.8.6",
     "react-dom": "^16.8.6",
